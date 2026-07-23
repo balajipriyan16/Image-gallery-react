@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Roboto, Arial, sans-serif;
+    background-color: #d4e5ff;
+}
+
+
+.gallery-title {
+    text-align: center;
+    padding: 20px 15px 10px;
+}
+
+.gallery-title h1 {
+    font-size: 32px;
+    color: #1e293b;
+}
+
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.Imgcard {
+    background-color: #1e3a8a;
+    background: linear-gradient(145deg, #1e3a8a, #2563eb);
+    padding: 16px;
+    margin: 0;
+    border-radius: 12px;
+    flex: 1 1 260px;
+    max-width: 350px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.Imgcard:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.Imgcard img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.Imgcard p {
+    color: whitesmoke;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 4px;
+}
+
+.Imgcard p:first-of-type {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+
+@media (max-width: 768px) {
+    .gallery-title h1 {
+        font-size: 22px;
+    }
+
+    .gallery-container {
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .Imgcard {
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .gallery-title h1 {
+        font-size: 18px;
+    }
+
+    .gallery-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .Imgcard {
+        flex: 1 1 100%;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .Imgcard img {
+        height: 160px;
+    }
+}
